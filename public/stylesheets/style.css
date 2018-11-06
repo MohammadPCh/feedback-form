@@ -6,6 +6,8 @@ body {
   /* padding: 50px; */
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   direction: rtl;
+  font-family: IRANSans !important;
+	font-weight: 300;
 }
 
 a {
@@ -13,6 +15,8 @@ a {
 }
 
 input, textarea{
+  font-family: IRANSans !important;
+	font-weight: 300;
   width: 100%;
   margin: 10px auto;
 }
