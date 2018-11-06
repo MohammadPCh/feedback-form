@@ -1,8 +1,45 @@
+*{
+  box-sizing: border-box;
+}
+
 body {
-  padding: 50px;
+  /* padding: 50px; */
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  direction: rtl;
 }
 
 a {
   color: #00B7FF;
+}
+
+input, textarea{
+  width: 100%;
+  margin: 10px auto;
+}
+
+h1{
+  text-align: center;
+}
+
+.box1{
+  margin: auto;
+  width: 100%;
+  text-align: justify
+}
+
+@media (min-width: 576px) {
+  .box1{width: 500px;}
+}
+
+@media (min-width: 768px) {
+  .box1{width: 700px;}   
+}
+
+@media (min-width: 992px) {
+  .box1{width: 700px;}
+}
+
+
+@media (min-width: 1200px) {
+  .box1{width: 700px;}
 }
