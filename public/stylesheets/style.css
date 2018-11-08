@@ -1,5 +1,6 @@
 *{
   box-sizing: border-box;
+  outline: none;
 }
 
 body {
@@ -19,6 +20,13 @@ input, textarea{
 	font-weight: 300;
   width: 100%;
   margin: 10px auto;
+  padding: 10px;
+}
+
+input[type=email],
+input[type=file]
+{
+  direction: ltr;
 }
 
 h1{

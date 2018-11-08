@@ -27,11 +27,15 @@
       مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار
       گیرد.
     </p>
-    <form action="upload" method="post">
+    <form action="upload" method="post" enctype="multipart/form-data">
       <input type="text" name="lanme" id="lanme" placeholder="نام خانوادگی">
       <input type="tel" name="tel" id="tel" placeholder="شماره تلفن">
       <input type="email" name="email" id="email" placeholder="E-mail">
       <textarea name="comment" id="comment" cols="30" rows="10" placeholder="توضیحات"></textarea>
+      <input type="file" name="attach" id="attach" class="mb-4 form-control-file ">
+      <div>
+          
+      </div>
       <input type="submit" value="ارسال">
     </form>
   </div>

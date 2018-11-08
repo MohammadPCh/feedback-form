@@ -2,12 +2,27 @@ let mongoose = require('mongoose');
 let Schema = mongoose.Schema;
 
 let FeedbackSchema = new Schema({
-    lname: {type:String,required:true},
-    tel: {type:String},
-    email: {type:String},
-    file_url: {type : String},
-    desc: {type:String},
+    lname: {
+        type: String,
+        required: true
+    },
+    tel: {
+        type: String
+    },
+    email: {
+        type: String
+    },
+    desc: {
+        type: String
+    },
+    img: {
+        type: String
+    },
     date: Date
+});
+
+ArticleSchema.virtual('img_url').get(function () {
+    return '/feedbacks/images/' + this.img;
 });
 
 // Export model.
