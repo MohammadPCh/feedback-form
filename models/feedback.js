@@ -21,7 +21,7 @@ let FeedbackSchema = new Schema({
     date: Date
 });
 
-ArticleSchema.virtual('img_url').get(function () {
+FeedbackSchema.virtual('img_url').get(function () {
     return '/feedbacks/images/' + this.img;
 });
 
