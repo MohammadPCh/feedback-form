@@ -86,7 +86,6 @@ router.get('/signin', function (req, res) {
   res.sendFile(path.join(__dirname, '/../views/signin.html'));
 });
 
-
 router.get('/signout', function(req, res){
   req.logout();
   res.redirect('/');

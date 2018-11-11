@@ -88,4 +88,31 @@ router.post('/upload', upload.single('attach'), function (req, res, next) {
   });
 });
 
+
+
+router.get('/:page(\\d+)', function (req, res) {
+  console.log(req.user);
+  console.log(req.params);
+  Feedback.estimatedDocumentCount(function (err, total) {
+    const limit = 10;
+    const lastpage = Math.ceil(total / limit);
+    const page = req.params.page;
+    console.log('Total: ', total);
+    console.log('Lastpage: ', lastpage);
+    if (page > lastpage || page < 1) {
+      res.status(404);
+      res.send("Not found");
+      return false;
+    }
+    Feedback.find().skip((page - 1) * limit).limit(limit).exec(function (err, data) {
+      if (err) {
+        res.status(505);
+        res.send("Error");
+        return false; 
+      }
+      res.send(data);
+    });
+  });
+});
+
 module.exports = router;
